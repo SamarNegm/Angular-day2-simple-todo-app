@@ -1,0 +1,66 @@
+<p>home works!</p>
+{{sname}}
+{{1+1}}
+{{'name: '+sname}}
+<img src="{{imgSrc}}" alt="">
+<!--
+<p *ngIf="isvalid; then valid else invalid"></p>
+<ng-template #invalid>
+  <div>
+    login -reg
+  </div>
+</ng-template>
+
+
+<ng-template #valid>
+  <div>
+    name:jkgjfkgj
+  </div>
+</ng-template> -->
+
+
+
+<div *ngIf="isvalid">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, at magni doloremque sit ullam a? Quae obcaecati
+  possimus libero dolorum in blanditiis? Molestias enim dolor saepe atque? Velit, iure odio!
+</div>
+<ul>
+  <li *ngFor="let x of months;let i=index">{{x}}--{{i}}</li>
+</ul>
+<select>
+  <option *ngFor="let m of months;let i=index" value="{{i}}">{{m}}</option>
+</select>
+
+<ul>
+  <li *ngFor="let c of peopleByCountry">{{c.country}}
+    <ul>
+      <li *ngFor="let p of c.people">{{p.name}}</li>
+    </ul>
+  </li>
+</ul>
+<ul>
+
+  <li *ngFor="let person of people" [ngSwitch]="person.country">
+
+    <p *ngSwitchCase="'USA'" class="text-danger"> {{person.country}}</p>
+    <p *ngSwitchCase="'UK'" class="text-primary">{{person.country}}</p>
+    <p *ngSwitchDefault>{{person.country}}</p>
+
+  </li>
+</ul>
+<!-- <app-content>
+  <div>
+    <p>Lorem works!</p>
+  </div>
+</app-content> -->
+<!-- <app-content>
+  content2
+</app-content> -->
+<app-content>
+  <div head>head</div>
+  <div body #body> body</div>{{body.innerHTML}}
+  <div body #body2> body2</div>
+  <div body #body2> body3</div>
+  <div body #body2> body4</div>
+  <div footer> footer</div>
+</app-content>

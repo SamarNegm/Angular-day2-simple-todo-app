@@ -1,0 +1,40 @@
+<style>
+
+</style>
+
+<input type="button" value="click me" (click)="print()">
+<input type="text" #user (keyup)="print2(user.value)">{{user.value}}
+<input type="text" #user1 (change)="print2(user1.value)">{{user1.value}}
+<select #userSelect (change)="print2(userSelect.value)">
+  <option value="1">item1</option>
+  <option value="2">item2</option>
+  <option value="3">item3</option>
+  <option value="4">item4</option>
+</select>
+<input type="text" #username>
+<input type="button" value="print user" (click)="print2(username.value)">
+<input type="text" (keyup)="print3($event)">
+
+<div>
+  <img src="{{imgsrc}}" alt="" srcset="">
+  <img [src]="imgsrc" alt="">
+  <img [attr.src]="imgsrc" alt="">
+</div>
+<div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ipsum in quos repellendus libero iusto numquam ex
+  consequatur, ullam animi voluptates aliquid ea repudiandae. Perspiciatis totam consequatur consequuntur ducimus animi.
+</div>
+<p [ngClass]="[classlist]">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita quae a recusandae atque sit, laboriosam repellat
+  voluptatem magni laborum dolorem blanditiis ex officiis? Explicabo, nesciunt! Quibusdam nostrum inventore at deleniti!
+</p>
+<p [style]="{color:'darkblue'}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nulla, dolorem
+  mollitia
+  tempora illum dolorum,
+  doloremque voluptatum fuga tenetur quos excepturi alias rerum deleniti pariatur atque quidem porro. Ab, rerum.</p>
+<p [ngStyle]="styleobj">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae mollitia tenetur dicta
+  obcaecati
+  hic iste explicabo ex
+  sint amet alias est praesentium, rem, voluptatibus accusamus cum? Possimus quam molestias ullam.</p>
+<input type="button" value="save" (click)="togale()">
+<input type="button" value="click" [disabled]="isvalid">
